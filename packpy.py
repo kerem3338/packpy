@@ -10,7 +10,10 @@ def add_conf_file(filename):
   filedata = json.load(file)
 
   try:
-    os.chdir(filedata["install_path"])
+    if filedata["install_path"] =="current_path":
+      os.chdir(os.getcwd())
+    else:
+      os.chdir(filedata["install_path"])
   except KeyError:
     print(f"{filename} dosyasında install_path bulunamadı.")
   except FileNotFoundError:
@@ -34,4 +37,3 @@ def add_conf_file(filename):
 
 if __name__ == "__main__":
   add_conf_file(sys.argv[1])
-
