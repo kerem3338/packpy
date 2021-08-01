@@ -41,4 +41,5 @@ if __name__ == "__main__":
       add_conf_file("install_package.json")
     except FileNotFoundError:
       print("install_package.json dosyası bulunamadı")
-  add_conf_file(sys.argv[1])
+  else:
+    add_conf_file(sys.argv[1])
