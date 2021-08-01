@@ -36,4 +36,9 @@ def add_conf_file(filename):
     print("İnirilecek paket bulunamadı")
 
 if __name__ == "__main__":
+  if sys.argv[1] == "run-standart":
+    try:
+      add_conf_file("install_package.json")
+    except FileNotFoundError:
+      print("install_package.json dosyası bulunamadı")
   add_conf_file(sys.argv[1])
