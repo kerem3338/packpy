@@ -11,6 +11,10 @@ def add_conf_file(filename):
   filedata = json.load(file)
 
   try:
+    print(filedata["message"])
+  except KeyError:
+    pass
+  try:
     if filedata["install_path"] =="current_path":
       os.chdir(os.getcwd())
     else:
@@ -44,9 +48,11 @@ if __name__ == "__main__":
         add_conf_file("install_package.json")
       except FileNotFoundError:
         print("install_package.json dosyası bulunamadı")
+    elif sys.argv[1] =="control":
+      print("Yakında")
     elif sys.argv[1] == "-h":
-      print()
+      print("Packpy yardım\n\n-h bu mesaj\nrun-standart install_package.json çalıştırılır\n<json dosyayıs> json dosyası çalıştırılır\ncontrol kontrol versiyon")
     else:
       add_conf_file(sys.argv[1])
-  except İndexError:
+  except IndexError:
     print("Argüman girilmedi\nyardım için python packpy -h")
