@@ -1,6 +1,7 @@
 #2021 Kakos lkişselleştirilmiş lisans © Zoda
 #Bu kodu kişsel kullanım için modifiye edip yayımlayabilirsiniz
 
+#TODO: install message
 import json
 import os
 import sys
@@ -37,10 +38,15 @@ def add_conf_file(filename):
     print("İnirilecek paket bulunamadı")
 
 if __name__ == "__main__":
-  if sys.argv[1] == "run-standart":
-    try:
-      add_conf_file("install_package.json")
-    except FileNotFoundError:
-      print("install_package.json dosyası bulunamadı")
-  else:
-    add_conf_file(sys.argv[1])
+  try:
+    if sys.argv[1] == "run-standart":
+      try:
+        add_conf_file("install_package.json")
+      except FileNotFoundError:
+        print("install_package.json dosyası bulunamadı")
+    elif sys.argv[1] == "-h":
+      print()
+    else:
+      add_conf_file(sys.argv[1])
+  except İndexError:
+    print("Argüman girilmedi\nyardım için python packpy -h")
