@@ -25,7 +25,8 @@ def add_conf_file(filename):
     "python": "apt install python",
     "c": "apt install clang",
     "ruby": "apt install ruby",
-    "php": "apt install php"
+    "php": "apt install php",
+    "git": "apt install git"
   }
   
   
