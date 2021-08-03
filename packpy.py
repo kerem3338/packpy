@@ -14,6 +14,8 @@ def add_conf_file(filename):
     print(filedata["message"])
   except KeyError:
     pass
+  
+  
   try:
     if filedata["install_path"] =="current_path":
       os.chdir(os.getcwd())
