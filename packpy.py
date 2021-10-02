@@ -7,6 +7,7 @@ import os
 import sys
 
 def add_conf_file(filename):
+  """Add configuration file"""
   file = open(filename, "r")
   filedata = json.load(file)
 
