@@ -1,7 +1,7 @@
 #2021 Kakos lkişselleştirilmiş lisans © Zoda
 #Bu kodu kişsel kullanım için modifiye edip yayımlayabilirsiniz
 
-#TODO: install message
+#TODO: add github install option
 import json
 import os
 import sys
