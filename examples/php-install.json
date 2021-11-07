@@ -3,7 +3,7 @@ Yazar: Zoda
 tarih: 22.28 1/8/2021
 */
 {
-  "message": "Merhaba, Php",
+  "message": "Php installing...",
   "install_path": "current_path",
   "install_package": "php"
 }
